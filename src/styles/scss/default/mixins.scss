@@ -1,0 +1,106 @@
+@mixin customGrid($display:grid,$gTempColumnsWidth:null,$gTempColumnsNumber:null,$mediaMaxWidth:1525px,$mediaReduceInOrder:250px,$gridAutoRows:null,$gridRow:null,$gridColumn:null,$gap:null) {
+  display: $display;
+  grid-template-columns:if($gTempColumnsWidth != null, repeat(auto-fit, minmax($gTempColumnsWidth, 1fr)), null);
+  @if ($gTempColumnsNumber) {
+    grid-template-columns: repeat($gTempColumnsNumber, 1fr);
+    @for $i from 1 through $gTempColumnsNumber {
+      @media screen and (max-width: $mediaMaxWidth - $i * $mediaReduceInOrder) {
+        @if ($gTempColumnsNumber - $i != 0) {
+          grid-template-columns: repeat($gTempColumnsNumber - $i, 1fr);
+        }
+      }
+    }
+  }
+  gap: if($gap != null, $gap, null);
+  grid-auto-rows: if($gridAutoRows != null, $gridAutoRows, null);
+  grid-row: if($gridRow != null, $gridRow, null);
+  grid-column: if($gridColumn != null, $gridColumn, null);
+}
+
+@mixin customFlex($display:flex,$alignItems:null,$justifyContent:null,$flexWrap:null,$flexDirection:null,$gap:null) {
+  display: $display;
+  @if ($display == flex) {
+    display: -webkit-flex;
+  } @else if ($display == inline-flex) {
+    display: -webkit-inline-flex;
+  }
+  align-items: if($alignItems != null, $alignItems, null);
+  -webkit-align-items: if($alignItems != null, $alignItems, null);
+  justify-content: if($justifyContent != null, $justifyContent, null);
+  -webkit-justify-content: if($justifyContent != null, $justifyContent, null);
+  flex-direction: if($flexDirection != null, $flexDirection, null);
+  -webkit-flex-direction: if($flexDirection != null, $flexDirection, null);
+  flex-wrap: if($flexWrap != null, $flexWrap, null);
+  -webkit-flex-wrap: if($flexWrap != null, $flexWrap, null);
+  gap: if($gap != null, $gap, null);
+}
+
+@mixin customPosition($content:null,$position:null,$top:null,$right:null,$bottom:null,$left:null,$zIndex:null) {
+  content: if($content != null, $content, null);
+  position: if($position != null, $position, null);
+  top: if($top != null, $top, null);
+  right: if($right != null, $right, null);
+  bottom: if($bottom != null, $bottom, null);
+  left: if($left != null, $left, null);
+  z-index: if($zIndex != null, $zIndex, null);
+}
+
+@mixin customBox($display:null,$flex:null,$alignContent:null,$width:null,$maxWidth:null,$minWidth:null,$height:null,$maxHeight:null,$minHeight:null,$border:null,$borderTop:null,$borderRight:null,$borderBottom:null,$borderLeft:null,$borderRadius:null,$background:null,$backgroundSize:null,$mixBlendMode:null,$boxShadow:null,$filter:null,$backdropFilter:null,$objectFit:null,$objectPosition:null,$transform:null,$transformOrigin:null,$willChange:null,$overflow:null,$opacity:null,$visibility:null,$transition:null,$animation:null,$cursor:null,$userSelect:null,$pointerEvents:null,$appearance:null,$clipPath:null,$zoom:null,$outline:null,$resize:null) {
+  display: if($display != null, $display, null);
+  flex: if($flex != null, $flex, null);
+  align-content: if($alignContent != null, $alignContent, null);
+  width: if($width != null, $width, null);
+  max-width: if($maxWidth != null, $maxWidth, null);
+  min-width: if($minWidth != null, $minWidth, null);
+  height: if($height != null, $height, null);
+  max-height: if($maxHeight != null, $maxHeight, null);
+  min-height: if($minHeight != null, $minHeight, null);
+  border: if($border != null, $border, null);
+  border-top: if($borderTop != null, $borderTop, null);
+  border-right: if($borderRight != null, $borderRight, null);
+  border-bottom: if($borderBottom != null, $borderBottom, null);
+  border-left: if($borderLeft != null, $borderLeft, null);
+  border-radius: if($borderRadius != null, $borderRadius, null);
+  background: if($background != null, $background, null);
+  background-size: if($backgroundSize != null, $backgroundSize, null);
+  mix-blend-mode: if($mixBlendMode != null, $mixBlendMode, null);
+  box-shadow: if($boxShadow != null, $boxShadow, null);
+  filter: if($filter != null, $filter, null);
+  backdrop-filter: if($backdropFilter != null, $backdropFilter, null);
+  object-fit: if($objectFit != null, $objectFit, null);
+  object-position: if($objectPosition != null, $objectPosition, null);
+  transform: if($transform != null, $transform, null);
+  transform-origin: if($transformOrigin != null, $transformOrigin, null);
+  will-change: if($willChange != null, $willChange, null);
+  overflow: if($overflow != null, $overflow, null);
+  opacity: if($opacity != null, $opacity, null);
+  visibility: if($visibility != null, $visibility, null);
+  transition: if($transition != null, $transition, null);
+  animation: if($animation != null, $animation, null);
+  cursor: if($cursor != null, $cursor, null);
+  user-select: if($userSelect != null, $userSelect, null);
+  pointer-events: if($pointerEvents != null, $pointerEvents, null);
+  appearance: if($appearance != null, $appearance, null);
+  clip-path: if($clipPath != null, $clipPath, null);
+  zoom: if($zoom != null, $zoom, null);
+  outline: if($outline != null, $outline, null);
+  resize: if($resize != null, $resize, null);
+}
+
+@mixin customTexts($color:null,$fontFamily:null,$fontStyle:null,$fontSize:null,$fontWeight:null,$lineHeight:null,$textAlign:null,$textDecoration:null,$textShadow:null,$whiteSpace:null) {
+  color: if($color != null, $color, null);
+  font-family: if($fontFamily != null, $fontFamily, null);
+  font-style: if($fontStyle != null, $fontStyle, null);
+  font-size: if($fontSize != null, $fontSize, null);
+  font-weight: if($fontWeight != null, $fontWeight, null);
+  line-height: if($lineHeight != null, $lineHeight, null);
+  text-align: if($textAlign != null, $textAlign, null);
+  text-decoration: if($textDecoration != null, $textDecoration, null);
+  text-shadow: if($textShadow != null, $textShadow, null);
+  white-space: if($whiteSpace != null, $whiteSpace, null);
+}
+
+@mixin customIntervals($padding:null,$margin:null) {
+  padding: if($padding != null, $padding, null);
+  margin: if($margin != null, $margin, null);
+}

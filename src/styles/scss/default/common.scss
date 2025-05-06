@@ -1,0 +1,155 @@
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  font-family: "DM Sans", -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, textarea, button {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button, input[type=button], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+:root {
+  --html-font-size-xl-default: 16px;
+  --html-font-size-md: 14px;
+  --html-font-size-sm: 12px;
+  --max-width-xl: 1800px;
+  --max-width-md: 1170px;
+  --max-width-sm: 1025px;
+  --container-max-width-starting-px: 1400px;
+  --container-max-width-starting: 1400;
+  --clamp-vw: calc(var(--container-max-width-starting) / 100);
+}
+
+html {
+  font-family: Arial, -apple-system, sans-serif;
+  font-size: var(--html-font-size-xl-default);
+}
+
+@media screen and (max-width: 1025px) {
+  html {
+    font-size: var(--html-font-size-md);
+  }
+}
+
+@media screen and (max-width: 525px) {
+  html {
+    font-size: var(--html-font-size-sm);
+  }
+}
+
+.light-mode {
+  --primary-color: #000;
+  --second-color: #181A1F;
+  --thirty-color: #F6F6F6;
+  color: var(--second-color);
+  overflow-x: hidden;
+}
+
+.dark-mode {
+  /** dark mode colors **/
+}
+
+.ftz-container-xl {
+  @include customBox($maxWidth: var(--max-width-xl), $width: 100%);
+  @include customIntervals($margin: 0 auto);
+}
+
+.ftz-container-md {
+  @include customBox($maxWidth: var(--max-width-md), $width: 100%);
+  @include customIntervals($margin: 0 auto);
+}
+
+.ftz-container-sm {
+  @include customBox($maxWidth: var(--max-width-sm), $width: 100%);
+  @include customIntervals($margin: 0 auto);
+}
+
+.d-computer {
+  display: block !important;
+}
+
+.df-computer {
+  display: flex !important;
+}
+
+.d-mobile {
+  display: none !important;
+}
+
+.df-mobile {
+  display: none !important;
+}
+
+.df-wrap {
+  @include customFlex();
+}
+
+.df-w-center {
+  @include customFlex($justifyContent: center);
+}
+
+.df-w-space-between {
+  @include customFlex($justifyContent: space-between);
+}
+
+.df-w-a-center {
+  @include customFlex($alignItems: center);
+}
+
+.g-24 {
+  @include customFlex($gap: clamp(12px, calc(24vw / var(--clamp-vw)), 24px));
+}
+
+.g-28 {
+  @include customFlex($gap: clamp(14px, calc(28vw / var(--clamp-vw)), 28px));
+}
+
+@media screen and (max-width: 1025px) {
+  .d-computer {
+    display: none !important;
+  }
+
+  .df-computer {
+    display: none !important;
+  }
+
+  .d-mobile {
+    display: block !important;
+  }
+
+  .df-mobile {
+    display: flex !important;
+  }
+
+  .df-wrap, .df-w-center, .df-w-space-between, .df-w-a-center {
+    @include customFlex($flexWrap: wrap);
+  }
+}

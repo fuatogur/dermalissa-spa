@@ -1,0 +1,39 @@
+@import "mixins";
+
+.full-page {
+  @include customBox($background: #fff);
+
+  & .header-box {
+    @include customFlex($justifyContent: center);
+    @include customBox($borderBottom: 1px solid #000);
+    @include customIntervals($padding: 10px);
+
+    & img {
+      @include customBox($maxWidth: 234px, $width: 100%);
+    }
+  }
+
+  & .main-box {
+  }
+
+  & .footer-box {
+    @include customBox($borderTop: 1px solid #000);
+    @include customIntervals($padding: 20px);
+
+    & p {
+      @include customTexts($textAlign: center, $fontSize: 0.725rem);
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .full-page {
+    & .header-box {
+
+    }
+
+    & .footer-box {
+
+    }
+  }
+}
