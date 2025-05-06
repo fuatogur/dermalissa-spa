@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 * {
@@ -78,18 +78,18 @@ html {
 }
 
 .ftz-container-xl {
-  @include customBox($maxWidth: var(--max-width-xl), $width: 100%);
-  @include customIntervals($margin: 0 auto);
+  @include mixins.customBox($maxWidth: var(--max-width-xl), $width: 100%);
+  @include mixins.customIntervals($margin: 0 auto);
 }
 
 .ftz-container-md {
-  @include customBox($maxWidth: var(--max-width-md), $width: 100%);
-  @include customIntervals($margin: 0 auto);
+  @include mixins.customBox($maxWidth: var(--max-width-md), $width: 100%);
+  @include mixins.customIntervals($margin: 0 auto);
 }
 
 .ftz-container-sm {
-  @include customBox($maxWidth: var(--max-width-sm), $width: 100%);
-  @include customIntervals($margin: 0 auto);
+  @include mixins.customBox($maxWidth: var(--max-width-sm), $width: 100%);
+  @include mixins.customIntervals($margin: 0 auto);
 }
 
 .d-computer {
@@ -109,27 +109,27 @@ html {
 }
 
 .df-wrap {
-  @include customFlex();
+  @include mixins.customFlex();
 }
 
 .df-w-center {
-  @include customFlex($justifyContent: center);
+  @include mixins.customFlex($justifyContent: center);
 }
 
 .df-w-space-between {
-  @include customFlex($justifyContent: space-between);
+  @include mixins.customFlex($justifyContent: space-between);
 }
 
 .df-w-a-center {
-  @include customFlex($alignItems: center);
+  @include mixins.customFlex($alignItems: center);
 }
 
 .g-24 {
-  @include customFlex($gap: clamp(12px, calc(24vw / var(--clamp-vw)), 24px));
+  @include mixins.customFlex($gap: clamp(12px, calc(24vw / var(--clamp-vw)), 24px));
 }
 
 .g-28 {
-  @include customFlex($gap: clamp(14px, calc(28vw / var(--clamp-vw)), 28px));
+  @include mixins.customFlex($gap: clamp(14px, calc(28vw / var(--clamp-vw)), 28px));
 }
 
 @media screen and (max-width: 1025px) {
@@ -150,6 +150,6 @@ html {
   }
 
   .df-wrap, .df-w-center, .df-w-space-between, .df-w-a-center {
-    @include customFlex($flexWrap: wrap);
+    @include mixins.customFlex($flexWrap: wrap);
   }
 }

@@ -1,62 +1,62 @@
-@import "../../default/mixins";
+@use "../../default/mixins";
 
 .home-sweet-biggest-banner {
-  @include customFlex();
-  @include customIntervals($padding: 20px 0);
+  @include mixins.customFlex();
+  @include mixins.customIntervals($padding: 20px 0);
 
   & .swiper {
-    @include customBox($width: 100%);
+    @include mixins.customBox($width: 100%);
 
     & .swiper-slide {
-      @include customPosition($position: relative);
-      @include customBox();
+      @include mixins.customPosition($position: relative);
+      @include mixins.customBox();
 
       & > div:first-child {
-        @include customIntervals($padding: 0 0 16px 0);
+        @include mixins.customIntervals($padding: 0 0 16px 0);
 
         & img {
-          @include customFlex();
-          @include customBox($width: 65%, $transform: rotate(24deg));
-          @include customIntervals($margin: 0 auto);
+          @include mixins.customFlex();
+          @include mixins.customBox($width: 65%, $transform: rotate(24deg));
+          @include mixins.customIntervals($margin: 0 auto);
         }
       }
 
       & > div:last-child {
-        @include customPosition($position: relative, $zIndex: 2);
-        @include customBox($width: 100%);
+        @include mixins.customPosition($position: relative, $zIndex: 2);
+        @include mixins.customBox($width: 100%);
 
         & img {
-          @include customFlex();
-          @include customBox($width: 90%);
-          @include customIntervals($margin: 0 auto);
+          @include mixins.customFlex();
+          @include mixins.customBox($width: 90%);
+          @include mixins.customIntervals($margin: 0 auto);
         }
       }
     }
   }
 
   & > nav {
-    @include customBox($maxWidth: 303px, $width: 100%, $borderLeft: 1px solid #000, $borderRight: 1px solid #000);
-    @include customIntervals($padding: 0 0 10px 0);
+    @include mixins.customBox($maxWidth: 303px, $width: 100%, $borderLeft: 1px solid #000, $borderRight: 1px solid #000);
+    @include mixins.customIntervals($padding: 0 0 10px 0);
 
     & ul {
-      @include customPosition($position: sticky, $top: 20px, $zIndex: 1);
-      @include customFlex($flexDirection: column, $alignItems: center, $gap: 10px);
+      @include mixins.customPosition($position: sticky, $top: 20px, $zIndex: 1);
+      @include mixins.customFlex($flexDirection: column, $alignItems: center, $gap: 10px);
 
       & li {
         & a {
-          @include customPosition($position: relative);
-          @include customBox($transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48), $cursor: pointer);
+          @include mixins.customPosition($position: relative);
+          @include mixins.customBox($transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48), $cursor: pointer);
 
           &::before {
-            @include customPosition($content: "", $position: absolute, $top: 0, $left: calc(100% + 2px), $zIndex: 1);
-            @include customBox($width: 20px, $height: 29px, $background: url("/../dermalissa/public/assets/images/logo/icon.svg"), $backgroundSize: 100%, $transform: rotate(0deg), $opacity: 0, $visibility: hidden, $transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48));
+            @include mixins.customPosition($content: "", $position: absolute, $top: 0, $left: calc(100% + 2px), $zIndex: 1);
+            @include mixins.customBox($width: 20px, $height: 29px, $background: url("/../dermalissa/public/assets/images/logo/icon.svg"), $backgroundSize: 100%, $transform: rotate(0deg), $opacity: 0, $visibility: hidden, $transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48));
           }
 
           &:hover, &.open {
-            @include customIntervals($padding: 0 10px 0 0);
+            @include mixins.customIntervals($padding: 0 10px 0 0);
 
             &::before {
-              @include customBox($opacity: 1, $visibility: visible);
+              @include mixins.customBox($opacity: 1, $visibility: visible);
             }
           }
         }
@@ -65,58 +65,58 @@
   }
 
   & .product-detail-rg-bar {
-    @include customBox($width: 100%);
+    @include mixins.customBox($width: 100%);
 
     & > article {
-      @include customPosition($position: sticky, $top: 0);
+      @include mixins.customPosition($position: sticky, $top: 0);
 
       &.REVITALIZING-OIL > p span {
-        @include customTexts($color: #B0855B, $fontWeight: 600);
+        @include mixins.customTexts($color: #B0855B, $fontWeight: 600);
       }
 
       &.SPF6-UVA-BRIGHTENING-CREAM > p span {
-        @include customTexts($color: #3CACAF, $fontWeight: 600);
+        @include mixins.customTexts($color: #3CACAF, $fontWeight: 600);
       }
 
       &.RETINOL-NIGHT-CREAM > p span {
-        @include customTexts($color: #7D217F, $fontWeight: 600);
+        @include mixins.customTexts($color: #7D217F, $fontWeight: 600);
       }
 
       &.ANTIOXIDANT-VITAMIN-C-CREAM > p span {
-        @include customTexts($color: #DB8620, $fontWeight: 600);
+        @include mixins.customTexts($color: #DB8620, $fontWeight: 600);
       }
 
       &.ULTRA-HYDRATING-CREAM > p span {
-        @include customTexts($color: #3E89C7, $fontWeight: 600);
+        @include mixins.customTexts($color: #3E89C7, $fontWeight: 600);
       }
 
       &.CREAM-FOR-ACNE-PRONE-SKIN > p span {
-        @include customTexts($color: #339B73, $fontWeight: 600);
+        @include mixins.customTexts($color: #339B73, $fontWeight: 600);
       }
 
       &.ANTI-WRINKLE-CREAM > p span {
-        @include customTexts($color: #BD5B8E, $fontWeight: 600);
+        @include mixins.customTexts($color: #BD5B8E, $fontWeight: 600);
       }
 
       &.EYE-REPAIR-CREAM > p span {
-        @include customTexts($color: #D87A81, $fontWeight: 600);
+        @include mixins.customTexts($color: #D87A81, $fontWeight: 600);
       }
 
       & h2 {
-        @include customIntervals($margin: 0 0 7px 0);
+        @include mixins.customIntervals($margin: 0 0 7px 0);
       }
     }
 
     & > article > * {
-      @include customIntervals($padding: 0 20px);
+      @include mixins.customIntervals($padding: 0 20px);
     }
 
     &:last-of-type > article {
-      @include customBox($display: none);
+      @include mixins.customBox($display: none);
     }
 
     &:last-of-type > article:first-child {
-      @include customBox($display: block);
+      @include mixins.customBox($display: block);
     }
   }
 }
