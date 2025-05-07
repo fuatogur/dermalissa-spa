@@ -8,10 +8,11 @@ interface Translation {
 interface Product {
     className: string,
     backgroundColor: string,
+    bodyColor?: string,
     slug: string,
     translations: {
         [key: string]: Translation
-    }
+    },
 }
 
 export type { Translation, Product }

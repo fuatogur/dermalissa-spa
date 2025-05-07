@@ -248,6 +248,7 @@ export const products: Product[] = [
     {
         className: 'REVITALIZING-OIL',
         backgroundColor: '#B0845B',
+        bodyColor: 'red',
         slug: 'revitalizing-oil',
         translations: {
             tr: {title: 'REVITALIZING OIL', description: oilDescription},
@@ -260,6 +261,7 @@ export const products: Product[] = [
     {
         className: 'SPF6-UVA-BRIGHTENING-CREAM',
         backgroundColor: '#3CACAF',
+        bodyColor: 'blue',
         slug: 'spf6uva-brightening-cream',
         translations: {
             tr: {title: 'SPF6 UVA/ BRIGHTENING CREAM tr', description: brighteningCream},
@@ -272,6 +274,7 @@ export const products: Product[] = [
     {
         className: 'RETINOL-NIGHT-CREAM',
         backgroundColor: '#7D2180',
+        bodyColor: 'yellow',
         slug: 'retinol-night-cream',
         translations: {
             tr: {title: 'RETINOL NIGHT CREAM tr', description: retiolNightCream},
@@ -284,6 +287,7 @@ export const products: Product[] = [
     {
         className: 'ANTIOXIDANT-VITAMIN-C-CREAM',
         backgroundColor: '#F9BA24',
+        bodyColor: 'red',
         slug: 'antioxidant-vitamin-c-cream',
         translations: {
             tr: {title: 'ANTIOXIDANT VITAMIN C CREAM tr', description: vitaminCCream},
@@ -296,6 +300,7 @@ export const products: Product[] = [
     {
         className: 'ULTRA-HYDRATING-CREAM',
         backgroundColor: '#3E89C7',
+        bodyColor: 'red',
         slug: 'ultra-hydrating-cream',
         translations: {
             tr: {title: 'ULTRA HYDRATING CREAM tr', description: ultraHydratingCream},
@@ -308,6 +313,7 @@ export const products: Product[] = [
     {
         className: 'CREAM-FOR-ACNE-PRONE-SKIN',
         backgroundColor: '#58B492',
+        bodyColor: 'red',
         slug: 'cream-for-acne-prone-skin',
         translations: {
             tr: {title: 'CREAM FOR ACNE PRONE SKIN tr', description: creamForAcneProneSkin},
@@ -320,6 +326,7 @@ export const products: Product[] = [
     {
         className: 'ANTI-WRINKLE-CREAM',
         backgroundColor: '#B9588B',
+        bodyColor: 'red',
         slug: 'anti-wrinkle-cream',
         translations: {
             tr: {title: 'ANTI-WRINKLE CREAM tr', description: antiWrinkleCream},
@@ -332,6 +339,7 @@ export const products: Product[] = [
     {
         className: 'EYE-REPAIR-CREAM',
         backgroundColor: '#DB7C83',
+        bodyColor: 'red',
         slug: 'eye-repair-cream',
         translations: {
             tr: {title: 'EYE REPAIR CREAM tr', description: eyeRepairCream},

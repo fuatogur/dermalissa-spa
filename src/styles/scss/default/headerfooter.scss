@@ -1,7 +1,7 @@
 @use "mixins";
 
 .full-page {
-  @include mixins.customBox($background: #fff);
+  // @include mixins.customBox($background: #fff);
 
   & .header-box {
     @include mixins.customFlex($justifyContent: center);

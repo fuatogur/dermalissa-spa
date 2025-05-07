@@ -81,7 +81,7 @@ export default function ProductPage({ product }: { product: any }) {
                 duration: 1.2,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             }} root>
-                <div className="full-page" style={{background: '#FCFAF2'}}>
+                <div className="full-page" style={{background: product.bodyColor ?? '#FCFAF2'}}>
                     <LanguageSwitcher/>
                     <Link href="/">
                         <header className="header-box">
@@ -90,7 +90,7 @@ export default function ProductPage({ product }: { product: any }) {
                     </Link>
                     <main className="main-box">
                         <section className="home-sweet-biggest-banner">
-                        <Swiper
+                            <Swiper
                                 ref={swiperRef}
                                 slidesPerView={1}
                                 freeMode
@@ -107,6 +107,7 @@ export default function ProductPage({ product }: { product: any }) {
                                     },
                                 }}
                                 modules={[EffectCreative]}
+                                allowTouchMove={false}
                             >
                                 <div className="swiper-wrapper">
                                     <SwiperSlide>
@@ -400,6 +401,7 @@ export async function getStaticProps({params, locale, defaultLocale}) {
                 index: products.indexOf(product),
                 className: product.className,
                 backgroundColor: product.backgroundColor,
+                bodyColor: product.bodyColor,
                 slug: product.slug,
                 translation: product.translations[locale]
             },

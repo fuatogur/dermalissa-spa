@@ -12,7 +12,7 @@
       @include mixins.customBox();
 
       & > div {
-        @include mixins.customBox($background: #fff);
+        // @include mixins.customBox($background: #fff);
       }
 
       & > div > div:first-child {
