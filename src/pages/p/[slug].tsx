@@ -333,7 +333,7 @@ export default function ProductPage({ product }: { product: any }) {
                             <nav>
                                 <ul>
                                     {products.map(product => (
-                                        <li key={product.slug}>
+                                        <li key={product.slug} style={{}}>
                                             <Link href={`/p/${product.slug}`} className={asPath === `/p/${product.slug}` ? 'open' : ''} scroll={false}>
                                                 {product.translations[locale!].title}
                                             </Link>
