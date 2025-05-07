@@ -8,9 +8,11 @@ const LanguageSwitcher = () => {
     return (
         <div>
             {locales!.map((lng) => (
-                <Link key={lng} href={asPath} locale={lng}>
-                    {lng.toUpperCase()}
-                </Link>
+                <div key={lng}>
+                    <Link href={asPath} locale={lng}>
+                        {lng.toUpperCase()}
+                    </Link>
+                </div>
             ))}
         </div>
     )
