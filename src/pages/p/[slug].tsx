@@ -1,6 +1,7 @@
 import {useEffect, useRef} from "react";
 import Head from "next/head";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
+import { EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import products from '@/data/products'
 import Link from "next/link";
@@ -94,209 +95,237 @@ export default function ProductPage({ product }: { product: any }) {
                                 slidesPerView={1}
                                 freeMode
                                 watchSlidesProgress
+                                grabCursor
+                                effect="creative"
+                                creativeEffect={{
+                                    prev: {
+                                        shadow: true,
+                                        translate: [0, 0, -400],
+                                    },
+                                    next: {
+                                        translate: ['100%', 0, 0],
+                                    },
+                                }}
+                                modules={[EffectCreative]}
                             >
                                 <div className="swiper-wrapper">
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/REVITALIZING-OIL.webp"
-                                                        type="image/webp"/>
-                                                <source srcSet="/assets/images/products/REVITALIZING-OIL.png"
-                                                        type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/REVITALIZING-OIL.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.webp"
-                                                        type="image/webp"/>
-                                                <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.png"
-                                                        type="image/png"/>
-                                                <img src="/assets/images/products/REVITALIZING-OIL-BOX.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
-                                                    type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
-                                                     alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
-                                                    type="image/png"/>
-                                                <img src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
-                                                     alt="" loading="lazy"/>
-                                            </picture>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL.png"
+                                                            type="image/png"/>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/REVITALIZING-OIL.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.png"
+                                                            type="image/png"/>
+                                                    <img src="/assets/images/products/REVITALIZING-OIL-BOX.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.webp"
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.webp"
                                                         type="image/webp"/>
-                                                <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.png"
+                                                    <source
+                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
                                                         type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/RETINOL-NIGHT-CREAM.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.webp"
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
+                                                         alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.webp"
                                                         type="image/webp"/>
-                                                <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
+                                                    <source
+                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
                                                         type="image/png"/>
-                                                <img src="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
+                                                    <img src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
+                                                         alt="" loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
-                                                    type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
-                                                     alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
-                                                    type="image/png"/>
-                                                <img
-                                                    src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
-                                                    alt="" loading="lazy"/>
-                                            </picture>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.png"
+                                                            type="image/png"/>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/RETINOL-NIGHT-CREAM.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
+                                                            type="image/png"/>
+                                                    <img src="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.webp"
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.webp"
                                                         type="image/webp"/>
-                                                <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.png"
+                                                    <source
+                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
                                                         type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/ULTRA-HYDRATING-CREAM.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
-                                                    type="image/png"/>
-                                                <img src="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
-                                                     alt=""
-                                                     loading="lazy"/>
-                                            </picture>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
+                                                         alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.webp"
+                                                        type="image/webp"/>
+                                                    <source
+                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
+                                                        type="image/png"/>
+                                                    <img
+                                                        src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
+                                                        alt="" loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
-                                                    type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
-                                                     alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source
-                                                    srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.webp"
-                                                    type="image/webp"/>
-                                                <source
-                                                    srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
-                                                    type="image/png"/>
-                                                <img src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
-                                                     alt="" loading="lazy"/>
-                                            </picture>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.png"
+                                                            type="image/png"/>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/ULTRA-HYDRATING-CREAM.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.webp"
+                                                        type="image/webp"/>
+                                                    <source
+                                                        srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
+                                                        type="image/png"/>
+                                                    <img src="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
+                                                         alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.webp"
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.webp"
                                                         type="image/webp"/>
-                                                <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.png"
+                                                    <source
+                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
                                                         type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/ANTI-WRINKLE-CREAM.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
-                                        </div>
-                                        <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.webp"
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
+                                                         alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source
+                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.webp"
                                                         type="image/webp"/>
-                                                <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png"
+                                                    <source
+                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
                                                         type="image/png"/>
-                                                <img src="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
+                                                    <img src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
+                                                         alt="" loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.webp"
-                                                        type="image/webp"/>
-                                                <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.png"
-                                                        type="image/png"/>
-                                                <img className="matrix-image"
-                                                     src="/assets/images/products/EYE-REPAIR-CREAM.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.png"
+                                                            type="image/png"/>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/ANTI-WRINKLE-CREAM.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png"
+                                                            type="image/png"/>
+                                                    <img src="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
                                         <div>
-                                            <picture>
-                                                <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.webp"
-                                                        type="image/webp"/>
-                                                <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.png"
-                                                        type="image/png"/>
-                                                <img src="/assets/images/products/EYE-REPAIR-CREAM-BOX.png" alt=""
-                                                     loading="lazy"/>
-                                            </picture>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.png"
+                                                            type="image/png"/>
+                                                    <img className="matrix-image"
+                                                         src="/assets/images/products/EYE-REPAIR-CREAM.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.webp"
+                                                            type="image/webp"/>
+                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.png"
+                                                            type="image/png"/>
+                                                    <img src="/assets/images/products/EYE-REPAIR-CREAM-BOX.png" alt=""
+                                                         loading="lazy"/>
+                                                </picture>
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                 </div>

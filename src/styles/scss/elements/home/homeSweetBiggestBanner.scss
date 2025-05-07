@@ -11,7 +11,11 @@
       @include mixins.customPosition($position: relative);
       @include mixins.customBox();
 
-      & > div:first-child {
+      & > div {
+        @include mixins.customBox($background: #fff);
+      }
+
+      & > div > div:first-child {
         @include mixins.customIntervals($padding: 0 0 16px 0);
 
         & img {
@@ -21,7 +25,7 @@
         }
       }
 
-      & > div:last-child {
+      & > div > div:last-child {
         @include mixins.customPosition($position: relative, $zIndex: 2);
         @include mixins.customBox($width: 100%);
 
@@ -49,7 +53,7 @@
 
           &::before {
             @include mixins.customPosition($content: "", $position: absolute, $top: 0, $left: calc(100% + 2px), $zIndex: 1);
-            @include mixins.customBox($width: 20px, $height: 29px, $background: url("/../dermalissa/public/assets/images/logo/icon.svg"), $backgroundSize: 100%, $transform: rotate(0deg), $opacity: 0, $visibility: hidden, $transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48));
+            @include mixins.customBox($width: 20px, $height: 29px, $background: url("/assets/images/logo/icon.svg"), $backgroundSize: 100%, $transform: rotate(0deg), $opacity: 0, $visibility: hidden, $transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48));
           }
 
           &:hover, &.open {
