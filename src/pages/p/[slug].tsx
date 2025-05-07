@@ -334,7 +334,7 @@ export default function ProductPage({ product }: { product: any }) {
                                 <ul>
                                     {products.map(product => (
                                         <li key={product.slug}>
-                                            <Link href={`/p/${product.slug}`} className={asPath === `/p/${product.slug}` ? 'open' : ''}>
+                                            <Link href={`/p/${product.slug}`} className={asPath === `/p/${product.slug}` ? 'open' : ''} scroll={false}>
                                                 {product.translations[locale!].title}
                                             </Link>
                                         </li>
