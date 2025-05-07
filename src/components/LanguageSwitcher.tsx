@@ -6,7 +6,7 @@ const LanguageSwitcher = () => {
     const { locales, asPath } = router
 
     return (
-        <div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, padding: 10}}>
             {locales!.map((lng) => (
                 <div key={lng}>
                     <Link href={asPath} locale={lng}>

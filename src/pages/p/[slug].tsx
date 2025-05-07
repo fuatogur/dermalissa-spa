@@ -82,7 +82,6 @@ export default function ProductPage({ product }: { product: any }) {
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             }} root>
                 <div className="full-page" style={{background: product.bodyColor ?? '#FCFAF2'}}>
-                    <LanguageSwitcher/>
                     <Link href="/">
                         <header className="header-box">
                             <img src="/assets/images/logo/logo.svg" alt="logo"/>
@@ -111,7 +110,7 @@ export default function ProductPage({ product }: { product: any }) {
                             >
                                 <div className="swiper-wrapper">
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#FCFAF2'}}>
                                             <div>
                                                 <picture>
                                                     <source srcSet="/assets/images/products/REVITALIZING-OIL.webp"
@@ -136,7 +135,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#F5FFFF'}}>
                                             <div>
                                                 <picture>
                                                     <source
@@ -166,7 +165,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#F2F0F9'}}>
                                             <div>
                                                 <picture>
                                                     <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.webp"
@@ -191,7 +190,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#FEF4F0'}}>
                                             <div>
                                                 <picture>
                                                     <source
@@ -222,7 +221,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#F3FAFF'}}>
                                             <div>
                                                 <picture>
                                                     <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.webp"
@@ -250,7 +249,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#F3F9F4'}}>
                                             <div>
                                                 <picture>
                                                     <source
@@ -280,7 +279,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#FEF5FA'}}>
                                             <div>
                                                 <picture>
                                                     <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.webp"
@@ -305,7 +304,7 @@ export default function ProductPage({ product }: { product: any }) {
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div>
+                                        <div style={{background: '#FCF5F6'}}>
                                             <div>
                                                 <picture>
                                                     <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.webp"
@@ -354,7 +353,9 @@ export default function ProductPage({ product }: { product: any }) {
                         </section>
                     </main>
                     <footer className="footer-box">
+                        <LanguageSwitcher/>
                         <p>Copyright © 2025 Dermalissa all rights reserved</p>
+
                     </footer>
                 </div>
             </ReactLenis>
