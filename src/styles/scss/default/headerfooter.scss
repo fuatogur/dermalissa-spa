@@ -1,15 +1,17 @@
 @use "mixins";
 
 .full-page {
-  // @include mixins.customBox($background: #fff);
+  @include mixins.customBox($transition: all 0.34s);
 
   & .header-box {
-    @include mixins.customFlex($justifyContent: center);
-    @include mixins.customBox($borderBottom: 1px solid #000);
-    @include mixins.customIntervals($padding: 10px);
+    & > div {
+      @include mixins.customFlex($justifyContent: center);
+      @include mixins.customBox($width: 100%, $borderBottom: 1px solid #000);
+      @include mixins.customIntervals($padding: 10px);
 
-    & img {
-      @include mixins.customBox($maxWidth: 234px, $width: 100%);
+      & img {
+        @include mixins.customBox($maxWidth: 234px, $width: 100%);
+      }
     }
   }
 

@@ -6,15 +6,15 @@ const LanguageSwitcher = () => {
     const { locales, asPath } = router
 
     return (
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, padding: 10}}>
+        <ul style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 13, background: '#000', padding: 10}}>
             {locales!.map((lng) => (
-                <div key={lng}>
-                    <Link href={asPath} locale={lng}>
-                        {lng.toUpperCase()}
+                <li key={lng}>
+                    <Link style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} href={asPath} locale={lng}>
+                        <img height="20" src={`/assets/images/languages/${lng.toUpperCase()}.svg`} alt={lng} />
                     </Link>
-                </div>
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 

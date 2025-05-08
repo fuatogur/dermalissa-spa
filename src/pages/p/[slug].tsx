@@ -1,15 +1,18 @@
 import {useEffect, useRef} from "react";
 import Head from "next/head";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
-import { EffectCreative } from 'swiper/modules';
+import {EffectCreative} from 'swiper/modules';
 import 'swiper/css';
 import products from '@/data/products'
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import {useRouter} from "next/router";
 import {ReactLenis} from 'lenis/react'
+import {DM_Sans} from 'next/font/google'
 
-export default function ProductPage({ product }: { product: any }) {
+const dmSans = DM_Sans({subsets: ['latin']})
+
+export default function ProductPage({product}: { product: any }) {
     if (!product) return <div>error</div>
 
     const {locale, locales, defaultLocale, asPath} = useRouter();
@@ -48,7 +51,7 @@ export default function ProductPage({ product }: { product: any }) {
             });
         };
 
-        window.addEventListener('scroll', callback);
+        window.addEventListener('scroll', callback, {passive: true});
 
         return () => {
             window.removeEventListener('scroll', callback);
@@ -82,12 +85,32 @@ export default function ProductPage({ product }: { product: any }) {
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             }} root>
                 <div className="full-page" style={{background: product.bodyColor ?? '#FCFAF2'}}>
-                    <Link href="/">
-                        <header className="header-box">
+                    <header className="header-box">
+                        <LanguageSwitcher/>
+                        <div>
                             <img src="/assets/images/logo/logo.svg" alt="logo"/>
-                        </header>
-                    </Link>
+                        </div>
+
+                    </header>
                     <main className="main-box">
+                        <section className="links" style={{background: product.bodyColor ?? '#FCFAF2'}}>
+                            <Swiper
+                                freeMode
+                                slidesPerView="auto">
+                                <div className="swiper-wrapper">
+                                    {products.map(product => (
+                                        <SwiperSlide key={product.slug}>
+                                            <Link href={`/p/${product.slug}`}
+                                                  className={asPath === `/p/${product.slug}` ? 'open' : ''}
+                                                  scroll={false}>
+                                                {product.translations[locale!].title}
+                                            </Link>
+                                        </SwiperSlide>
+                                    ))}
+                                </div>
+                            </Swiper>
+                        </section>
+
                         <section className="home-sweet-biggest-banner">
                             <Swiper
                                 ref={swiperRef}
@@ -158,8 +181,9 @@ export default function ProductPage({ product }: { product: any }) {
                                                     <source
                                                         srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
                                                         type="image/png"/>
-                                                    <img src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
-                                                         alt="" loading="lazy"/>
+                                                    <img
+                                                        src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
+                                                        alt="" loading="lazy"/>
                                                 </picture>
                                             </div>
                                         </div>
@@ -179,11 +203,13 @@ export default function ProductPage({ product }: { product: any }) {
                                             </div>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.webp"
-                                                            type="image/webp"/>
+                                                    <source
+                                                        srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.webp"
+                                                        type="image/webp"/>
                                                     <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
                                                             type="image/png"/>
-                                                    <img src="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png" alt=""
+                                                    <img src="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
+                                                         alt=""
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
@@ -330,32 +356,19 @@ export default function ProductPage({ product }: { product: any }) {
                                     </SwiperSlide>
                                 </div>
                             </Swiper>
-                            <nav>
-                                <ul>
-                                    {products.map(product => (
-                                        <li key={product.slug}>
-                                            <Link href={`/p/${product.slug}`} className={asPath === `/p/${product.slug}` ? 'open' : ''} scroll={false}>
-                                                {product.translations[locale!].title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
                             <div className="product-detail-rg-bar">
                                 <article className={product.className}>
                                     <h2 style={{
                                         color: '#fff',
-                                        background: product.backgroundColor
+                                        background: product.backgroundColor,
                                     }}>{product.translation.title}</h2>
-                                    <p dangerouslySetInnerHTML={{__html: product.translation.description}}></p>
+                                    <div dangerouslySetInnerHTML={{__html: product.translation.description}}></div>
                                 </article>
                             </div>
                         </section>
                     </main>
                     <footer className="footer-box">
-                        <LanguageSwitcher/>
                         <p>Copyright © 2025 Dermalissa all rights reserved</p>
-
                     </footer>
                 </div>
             </ReactLenis>
@@ -390,7 +403,7 @@ export async function getStaticProps({params, locale, defaultLocale}) {
         // geçersiz slug varsa redirect yap
         return {
             redirect: {
-                destination: `/${locale === defaultLocale ? '' :  locale + '/'}p/revitalizing-oil`,
+                destination: `/${locale === defaultLocale ? '' : locale + '/'}p/revitalizing-oil`,
                 permanent: false, // 307 redirect (geçici)
             },
         }

@@ -5,15 +5,11 @@
   @include mixins.customIntervals($padding: 20px 0);
 
   & .swiper {
-    @include mixins.customBox($width: 100%);
+    @include mixins.customBox($width: 60%);
 
     & .swiper-slide {
       @include mixins.customPosition($position: relative);
       @include mixins.customBox();
-
-      & > div {
-        // @include mixins.customBox($background: #fff);
-      }
 
       & > div > div:first-child {
         @include mixins.customIntervals($padding: 0 0 16px 0);
@@ -38,71 +34,41 @@
     }
   }
 
-  & > nav {
-    @include mixins.customBox($maxWidth: 303px, $width: 100%, $borderLeft: 1px solid #000, $borderRight: 1px solid #000);
-    @include mixins.customIntervals($padding: 0 0 10px 0);
-
-    & ul {
-      @include mixins.customPosition($position: sticky, $top: 20px, $zIndex: 1);
-      @include mixins.customFlex($flexDirection: column, $alignItems: center, $gap: 10px);
-
-      & li {
-        & a {
-          @include mixins.customPosition($position: relative);
-          @include mixins.customBox($transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48), $cursor: pointer);
-
-          &::before {
-            @include mixins.customPosition($content: "", $position: absolute, $top: 0, $left: calc(100% + 2px), $zIndex: 1);
-            @include mixins.customBox($width: 20px, $height: 29px, $background: url("/assets/images/logo/icon.svg"), $backgroundSize: 100%, $transform: rotate(0deg), $opacity: 0, $visibility: hidden, $transition: all 0.018s cubic-bezier(0.35, 0.12, 0.65, 0.48));
-          }
-
-          &:hover, &.open {
-            @include mixins.customIntervals($padding: 0 10px 0 0);
-
-            &::before {
-              @include mixins.customBox($opacity: 1, $visibility: visible);
-            }
-          }
-        }
-      }
-    }
-  }
-
   & .product-detail-rg-bar {
     @include mixins.customBox($width: 100%);
 
     & > article {
-      @include mixins.customPosition($position: sticky, $top: 0);
+      @include mixins.customPosition($position: sticky, $top: 50px);
 
-      &.REVITALIZING-OIL > p span {
+      &.REVITALIZING-OIL > div > p > span {
         @include mixins.customTexts($color: #B0855B, $fontWeight: 600);
       }
 
-      &.SPF6-UVA-BRIGHTENING-CREAM > p span {
+      &.SPF6-UVA-BRIGHTENING-CREAM > div > p > span {
         @include mixins.customTexts($color: #3CACAF, $fontWeight: 600);
       }
 
-      &.RETINOL-NIGHT-CREAM > p span {
+      &.RETINOL-NIGHT-CREAM > div > p > span {
         @include mixins.customTexts($color: #7D217F, $fontWeight: 600);
       }
 
-      &.ANTIOXIDANT-VITAMIN-C-CREAM > p span {
+      &.ANTIOXIDANT-VITAMIN-C-CREAM > div > p > span {
         @include mixins.customTexts($color: #DB8620, $fontWeight: 600);
       }
 
-      &.ULTRA-HYDRATING-CREAM > p span {
+      &.ULTRA-HYDRATING-CREAM > div > p > span {
         @include mixins.customTexts($color: #3E89C7, $fontWeight: 600);
       }
 
-      &.CREAM-FOR-ACNE-PRONE-SKIN > p span {
+      &.CREAM-FOR-ACNE-PRONE-SKIN > div > p > span {
         @include mixins.customTexts($color: #339B73, $fontWeight: 600);
       }
 
-      &.ANTI-WRINKLE-CREAM > p span {
+      &.ANTI-WRINKLE-CREAM > div > p > span {
         @include mixins.customTexts($color: #BD5B8E, $fontWeight: 600);
       }
 
-      &.EYE-REPAIR-CREAM > p span {
+      &.EYE-REPAIR-CREAM > div > p > span {
         @include mixins.customTexts($color: #D87A81, $fontWeight: 600);
       }
 
@@ -112,15 +78,13 @@
     }
 
     & > article > * {
-      @include mixins.customIntervals($padding: 0 20px);
+      @include mixins.customIntervals($padding: 3px 20px);
     }
+  }
+}
 
-    &:last-of-type > article {
-      @include mixins.customBox($display: none);
-    }
-
-    &:last-of-type > article:first-child {
-      @include mixins.customBox($display: block);
-    }
+@media screen and (max-width: 1025px) {
+  .home-sweet-biggest-banner {
+    @include mixins.customFlex($flexWrap: wrap);
   }
 }
