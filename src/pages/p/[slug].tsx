@@ -9,6 +9,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useRouter } from "next/router";
 import { ReactLenis } from 'lenis/react';
 import { DM_Sans } from 'next/font/google';
+import {stripTags} from "@/helpers";
 
 const dmSans = DM_Sans({ subsets: ['latin'] });
 
@@ -60,7 +61,7 @@ export default function ProductPage({ product }: { product: any }) {
             <Head>
                 {/* Primary Meta Tags */}
                 <title>{`Dermalissa - ${product.translation.title}`}</title>
-                <meta name="description" content={product.translation.description} />
+                <meta name="description" content={stripTags(product.translation.description)} />
                 <meta name="keywords" content={`Dermalissa, ${product.translation.title}, skincare, beauty, natural ingredients`} />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href={canonicalUrl} />
@@ -69,11 +70,12 @@ export default function ProductPage({ product }: { product: any }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
                 {/* Favicons */}
-                <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-                <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-                <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-                <meta name="apple-mobile-web-app-title" content="Dermalissa" />
+                {/* BUNLARA GEREK YOK TARAYICI ZATEN DİREKT /favicon.ico'ya İSTEK ATIYOR */}
+                {/*<link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />*/}
+                {/*<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />*/}
+                {/*<link rel="shortcut icon" href="/assets/favicon/favicon.ico" />*/}
+                {/*<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />*/}
+                {/*<meta name="apple-mobile-web-app-title" content="Dermalissa" />*/}
                 <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
                 {/* Open Graph / Facebook */}
@@ -81,14 +83,14 @@ export default function ProductPage({ product }: { product: any }) {
                 <meta property="og:site_name" content="Dermalissa" />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:title" content={`Dermalissa - ${product.translation.title}`} />
-                <meta property="og:description" content={product.translation.description} />
+                <meta property="og:description" content={stripTags(product.translation.description)} />
                 <meta property="og:image" content={ogImage} />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@DermalissaSkin" />
+                <meta name="twitter:site" content="@Dermalissa" />
                 <meta name="twitter:title" content={`Dermalissa - ${product.translation.title}`} />
-                <meta name="twitter:description" content={product.translation.description} />
+                <meta name="twitter:description" content={stripTags(product.translation.description)} />
                 <meta name="twitter:image" content={ogImage} />
 
                 {/* Alternate Language Links */}
