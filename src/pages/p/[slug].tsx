@@ -420,19 +420,6 @@ export async function getStaticPaths({locales}) {
         fallback: 'blocking',
     }
 }
-
-
-// @ts-ignore
-export async function getStaticPaths({ locales }) {
-    const paths: any[] = [];
-    for (const lng of locales) {
-        for (const product of products) {
-            paths.push({ params: { slug: product.slug }, locale: lng });
-        }
-    }
-    return { paths, fallback: 'blocking' };
-}
-
 // @ts-ignore
 export async function getStaticProps({ params, locale, defaultLocale }) {
     const productData = products.find((p) => p.slug === params.slug);
