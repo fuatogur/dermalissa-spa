@@ -164,22 +164,22 @@ export default function ProductPage({ product }: { product: any }) {
                                         <div style={{background: '#FCFAF2'}}>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL.webp"
+                                                    <source srcSet="/assets/images/products/revitalizing-oil.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL.png"
+                                                    <source srcSet="/assets/images/products/revitalizing-oil.png"
                                                             type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/REVITALIZING-OIL.png" alt=""
+                                                         src="/assets/images/products/revitalizing-oil.png" alt="Revitalizing Oil"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.webp"
+                                                    <source srcSet="/assets/images/products/revitalizing-oil-box.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/REVITALIZING-OIL-BOX.png"
+                                                    <source srcSet="/assets/images/products/revitalizing-oil-box.png"
                                                             type="image/png"/>
-                                                    <img src="/assets/images/products/REVITALIZING-OIL-BOX.png" alt=""
+                                                    <img src="/assets/images/products/revitalizing-oil-box.png" alt="Revitalizing Oil Box"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
@@ -190,28 +190,28 @@ export default function ProductPage({ product }: { product: any }) {
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.webp"
+                                                        srcSet="/assets/images/products/spf6-uva-brightening-cream.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
+                                                        srcSet="/assets/images/products/spf6-uva-brightening-cream.png"
                                                         type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM.png"
-                                                         alt=""
+                                                         src="/assets/images/products/spf6-uva-brightening-cream.png"
+                                                         alt="Brightening Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.webp"
+                                                        srcSet="/assets/images/products/spf6-uva-brightening-cream-box.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
+                                                        srcSet="/assets/images/products/spf6-uva-brightening-cream-box.png"
                                                         type="image/png"/>
                                                     <img
-                                                        src="/assets/images/products/SPF6-UVA-BRIGHTENING-CREAM-BOX.png"
-                                                        alt="" loading="lazy"/>
+                                                        src="/assets/images/products/spf6-uva-brightening-cream-box.png"
+                                                        alt="Brightening Cream Box" loading="lazy"/>
                                                 </picture>
                                             </div>
                                         </div>
@@ -220,24 +220,24 @@ export default function ProductPage({ product }: { product: any }) {
                                         <div style={{background: '#F2F0F9'}}>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.webp"
+                                                    <source srcSet="/assets/images/products/retinol-night-cream.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM.png"
+                                                    <source srcSet="/assets/images/products/retinol-night-cream.png"
                                                             type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/RETINOL-NIGHT-CREAM.png" alt=""
+                                                         src="/assets/images/products/retinol-night-cream.png" alt="Night Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.webp"
+                                                        srcSet="/assets/images/products/retinol-night-cream-box.webp"
                                                         type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
+                                                    <source srcSet="/assets/images/products/retinol-night-cream-box.png"
                                                             type="image/png"/>
-                                                    <img src="/assets/images/products/RETINOL-NIGHT-CREAM-BOX.png"
-                                                         alt=""
+                                                    <img src="/assets/images/products/retinol-night-cream-box.png"
+                                                         alt="Night Cream Box"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
@@ -248,28 +248,28 @@ export default function ProductPage({ product }: { product: any }) {
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.webp"
+                                                        srcSet="/assets/images/products/antioxidant-vitamin-c-cream.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
+                                                        srcSet="/assets/images/products/antioxidant-vitamin-c-cream.png"
                                                         type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM.png"
-                                                         alt=""
+                                                         src="/assets/images/products/antioxidant-vitamin-c-cream.png"
+                                                         alt="Vitamin C Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.webp"
+                                                        srcSet="/assets/images/products/antioxidant-vitamin-c-cream-box.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
+                                                        srcSet="/assets/images/products/antioxidant-vitamin-c-cream-box.png"
                                                         type="image/png"/>
                                                     <img
-                                                        src="/assets/images/products/ANTIOXIDANT-VITAMIN-C-CREAM-BOX.png"
-                                                        alt="" loading="lazy"/>
+                                                        src="/assets/images/products/antioxidant-vitamin-c-cream-box.png"
+                                                        alt="Vitamin C Cream Box" loading="lazy"/>
                                                 </picture>
                                             </div>
                                         </div>
@@ -278,25 +278,25 @@ export default function ProductPage({ product }: { product: any }) {
                                         <div style={{background: '#F3FAFF'}}>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.webp"
+                                                    <source srcSet="/assets/images/products/ultra-hydrating-cream.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM.png"
+                                                    <source srcSet="/assets/images/products/ultra-hydrating-cream.png"
                                                             type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/ULTRA-HYDRATING-CREAM.png" alt=""
+                                                         src="/assets/images/products/ultra-hydrating-cream.png" alt="Hydrating Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.webp"
+                                                        srcSet="/assets/images/products/ultra-hydrating-cream-box.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
+                                                        srcSet="/assets/images/products/ultra-hydrating-cream-box.png"
                                                         type="image/png"/>
-                                                    <img src="/assets/images/products/ULTRA-HYDRATING-CREAM-BOX.png"
-                                                         alt=""
+                                                    <img src="/assets/images/products/ultra-hydrating-cream-box.png"
+                                                         alt="Hydrating Cream Box"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
@@ -307,27 +307,27 @@ export default function ProductPage({ product }: { product: any }) {
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.webp"
+                                                        srcSet="/assets/images/products/cream-for-acne-prone-skin.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
+                                                        srcSet="/assets/images/products/cream-for-acne-prone-skin.png"
                                                         type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN.png"
-                                                         alt=""
+                                                         src="/assets/images/products/cream-for-acne-prone-skin.png"
+                                                         alt="Cream for Acne Prone Skin"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
                                                     <source
-                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.webp"
+                                                        srcSet="/assets/images/products/cream-for-acne-prone-skin-box.webp"
                                                         type="image/webp"/>
                                                     <source
-                                                        srcSet="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
+                                                        srcSet="/assets/images/products/cream-for-acne-prone-skin-box.png"
                                                         type="image/png"/>
-                                                    <img src="/assets/images/products/CREAM-FOR-ACNE-PRONE-SKIN-BOX.png"
-                                                         alt="" loading="lazy"/>
+                                                    <img src="/assets/images/products/cream-for-acne-prone-skin-box.png"
+                                                         alt="Cream for Acne Prone Skin Box" loading="lazy"/>
                                                 </picture>
                                             </div>
                                         </div>
@@ -336,22 +336,22 @@ export default function ProductPage({ product }: { product: any }) {
                                         <div style={{background: '#FEF5FA'}}>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.webp"
+                                                    <source srcSet="/assets/images/products/anti-wrinkle-cream.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM.png"
+                                                    <source srcSet="/assets/images/products/anti-wrinkle-cream.png"
                                                             type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/ANTI-WRINKLE-CREAM.png" alt=""
+                                                         src="/assets/images/products/anti-wrinkle-cream.png" alt="Anti Wrinkle Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.webp"
+                                                    <source srcSet="/assets/images/products/anti-wrinkle-cream-box.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png"
+                                                    <source srcSet="/assets/images/products/anti-wrinkle-cream-box.png"
                                                             type="image/png"/>
-                                                    <img src="/assets/images/products/ANTI-WRINKLE-CREAM-BOX.png" alt=""
+                                                    <img src="/assets/images/products/anti-wrinkle-cream-box.png" alt="Anti Wrinkle Cream Box"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
@@ -361,22 +361,22 @@ export default function ProductPage({ product }: { product: any }) {
                                         <div style={{background: '#FCF5F6'}}>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.webp"
+                                                    <source srcSet="/assets/images/products/eye-repair-cream.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM.png"
+                                                    <source srcSet="/assets/images/products/eye-repair-cream.png"
                                                             type="image/png"/>
                                                     <img className="matrix-image"
-                                                         src="/assets/images/products/EYE-REPAIR-CREAM.png" alt=""
+                                                         src="/assets/images/products/eye-repair-cream.png" alt="Eye Repair Cream"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
                                             <div>
                                                 <picture>
-                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.webp"
+                                                    <source srcSet="/assets/images/products/eye-repair-cream-box.webp"
                                                             type="image/webp"/>
-                                                    <source srcSet="/assets/images/products/EYE-REPAIR-CREAM-BOX.png"
+                                                    <source srcSet="/assets/images/products/eye-repair-cream-box.png"
                                                             type="image/png"/>
-                                                    <img src="/assets/images/products/EYE-REPAIR-CREAM-BOX.png" alt=""
+                                                    <img src="/assets/images/products/eye-repair-cream-box.png" alt="Eye Repair Cream Box"
                                                          loading="lazy"/>
                                                 </picture>
                                             </div>
