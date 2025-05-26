@@ -22,6 +22,33 @@ export default function ProductPage({ product }: { product: any }) {
     const canonicalUrl = `${baseUrl}${locale === defaultLocale ? '' : `/${locale}`}${asPath}`;
     const ogImage = `${baseUrl}/assets/images/products/${product.slug}.png`;
 
+    // JSON-LD objeniz
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dermalissa",
+        "alternateName": ["Dermalisse"],
+        "url": "https://dermalissa.com",
+        "email": "info@seskimya.com.tr",
+        "telephone": "+90 212 659 67 37",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Altınşehir Mah. Uğur Sok. No:3-5",
+            "addressLocality": "Başakşehir",
+            "addressRegion": "İstanbul",
+            "addressCountry": "TR"
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "SES KİMYA TEMİZLİK ÜRÜNLERİ GIDA SAN. VE TİC. A.Ş.",
+            "url": "https://seskimya.com"
+        },
+        "sameAs": [
+            "https://www.elvons.com",
+            "https://www.trendyol.com/magaza/elvons-m-131942?sst=0"
+        ]
+    }
+
     const swiperRef = useRef<SwiperRef>(null);
 
     useEffect(() => {
@@ -105,6 +132,11 @@ export default function ProductPage({ product }: { product: any }) {
                     rel="alternate"
                     hrefLang="x-default"
                     href={`${baseUrl}/p/${product.slug}`}
+                />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
             </Head>
             <ReactLenis options={{
