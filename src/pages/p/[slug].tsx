@@ -22,7 +22,6 @@ export default function ProductPage({ product }: { product: any }) {
     const canonicalUrl = `${baseUrl}${locale === defaultLocale ? '' : `/${locale}`}${asPath}`;
     const ogImage = `${baseUrl}/assets/images/products/${product.slug}.png`;
 
-    // JSON-LD objeniz
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
