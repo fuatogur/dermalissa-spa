@@ -87,7 +87,7 @@ export default function ProductPage({ product }: { product: any }) {
             <Head>
                 {/* Primary Meta Tags */}
                 <title>{`Dermalissa - ${product.translation.title}`}</title>
-                <meta name="description" content={stripTags(product.translation.description)} />
+                <meta name="description" content={`Dermalissa, ${stripTags(product.translation.description)}`} />
                 <meta name="keywords" content={`Dermalissa, ${product.translation.title}, skincare, beauty, natural ingredients`} />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href={canonicalUrl} />
